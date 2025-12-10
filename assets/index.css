@@ -315,6 +315,36 @@ body.dark-theme .project .details b {
     color: #ffffff;
 }
 
+/* PROJECT BUTTONS */
+
+#project-link {
+    background-color: #E3F0FF;
+    border: 1px solid #B8D4F2;
+    padding: 3px 8px;
+    border-radius: 16px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #163A5F;
+    transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+#project-link:hover {
+    background-color: #B8D4F2;
+    color: #1DA1F2;
+}
+
+body.dark-theme #project-link {
+    background-color: #182544;
+    color: #cfe0ff;
+    border: 1px solid #22355c;
+}
+
+body.dark-theme #project-link:hover {
+    background-color: #22355c;
+    color: #1DA1F2;
+    border-color: #4a8dff;
+}
+
 /* ACHIEVEMENTS */
 .achievement h4 {
     cursor: pointer;
