@@ -1,0 +1,231 @@
+/* -------------------------------------------------
+   GLOBAL
+---------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", "Poppins", sans-serif;
+}
+
+body {
+    background-color: #F4F9FF;
+    color: #1C1C1C;
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* -------------------------------------------------
+   DARK THEME OVERRIDES
+---------------------------------------------------*/
+body.dark-theme {
+    background-color: #0f1b33;
+    color: #e8efff;
+}
+
+body.dark-theme header::after {
+    background: rgba(20, 35, 70, 0.45);
+}
+
+body.dark-theme section,
+body.dark-theme .info-box {
+    background: #182544;
+    border: 1px solid #22355c;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+body.dark-theme h1,
+body.dark-theme h3,
+body.dark-theme h5,
+body.dark-theme h6 {
+    color: #e8efff;
+}
+
+body.dark-theme #toggle-theme {
+    background-color: #2f5fa4;
+    border-color: #8fb4ff;
+    color: white;
+}
+
+body.dark-theme footer {
+    background: #1e2e4b;
+    border-top: 2px solid #20345c;
+    color: #dce6ff;
+}
+
+/* -------------------------------------------------
+   TWITTER-LIKE HEADER / BANNER
+---------------------------------------------------*/
+header {
+    width: 100%;
+    height: 350px;
+    background: url('assets/images/header-background.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(180, 210, 245, 0.25);
+    backdrop-filter: blur(1px);
+}
+
+/* -------------------------------------------------
+   PROFILE SECTION
+---------------------------------------------------*/
+#profile-section {
+    width: 85%;
+    max-width: 850px;
+    margin: -110px auto 0 auto;
+    position: relative;
+}
+
+#profile-picture {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #fff;
+    z-index: 10;
+    position: relative;
+    margin-left: 15px;
+}
+
+#profile-text {
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+#profile-text h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #163A5F;
+}
+
+#profile-text h5 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #3C5F85;
+    margin-top: 3px;
+}
+
+#profile-text h6 {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #5E7FA5;
+    margin-top: 5px;
+}
+
+body.dark-theme #profile-text h1 {
+    color: #dce6ff;
+}
+body.dark-theme #profile-text h5 {
+    color: #b8c8e8;
+}
+body.dark-theme #profile-text h6 {
+    color: #90a4c8;
+}
+
+/* -------------------------------------------------
+   SWITCH THEME BUTTON
+---------------------------------------------------*/
+#toggle-theme {
+    position: absolute;
+    top: 94px;
+    right: 30px;
+    padding: 10px 22px;
+    background-color: #A7CFF7;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 20;
+}
+
+#toggle-theme:hover {
+    background-color: #8FBBE7;
+}
+
+/* -------------------------------------------------
+   MAIN CONTENT CARDS
+---------------------------------------------------*/
+main {
+    width: 85%;
+    max-width: 850px;
+    margin: 25px auto;
+}
+
+section {
+    background: white;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-top: 20px;
+    box-shadow: 0 3px 15px rgba(150, 180, 210, 0.25);
+    border: 1px solid #dfe7f3;
+    transition: background 0.3s, box-shadow 0.3s, border 0.3s;
+}
+
+section h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1F4C73;
+    margin-bottom: 12px;
+}
+
+body.dark-theme section h3 {
+    color: #cfe0ff;
+}
+
+/* LIST SPACING */
+ul, ol {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* -------------------------------------------------
+   2 BOX LAYOUT
+---------------------------------------------------*/
+.two-box-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.info-box {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 1px solid #e6eef8;
+    transition: background 0.3s, border 0.3s, box-shadow 0.3s;
+}
+
+.info-box h3 {
+    margin-top: 0;
+}
+
+@media (max-width: 800px) {
+    .two-box-wrapper {
+        flex-direction: column;
+    }
+}
+
+/* -------------------------------------------------
+   FOOTER
+---------------------------------------------------*/
+footer {
+    width: 100%;
+    padding: 40px 0;
+    margin-top: 40px;
+    background: #E3F0FF;
+    border-top: 2px solid #B8D4F2;
+    text-align: center;
+    transition: background 0.3s, color 0.3s, border 0.3s;
+}
